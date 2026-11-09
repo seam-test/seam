@@ -1,0 +1,38 @@
+:root{
+  --paper:#EEF1F4;
+  --ink:#16202E;
+  --muted:#516073;
+  --thread:#2B4BD8;
+  --line:#C9D1DB;
+  color-scheme:light dark;
+}
+@media (prefers-color-scheme:dark){
+  :root{--paper:#121821;--ink:#E9EDF2;--muted:#9AA7B8;--thread:#7F96FF;--line:#2B3644}
+}
+*{box-sizing:border-box}
+html{scroll-padding-top:1rem}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:"Schibsted Grotesk",system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size:1.0625rem;line-height:1.6;
+}
+a{color:var(--thread);text-underline-offset:.18em}
+a:focus-visible{outline:2px solid var(--thread);outline-offset:3px;border-radius:2px}
+.wrap{max-width:40rem;margin:0 auto;padding:clamp(1.5rem,6vw,4rem) 1.5rem 4rem}
+header.top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:clamp(3rem,10vw,6rem)}
+.mark{font-weight:800;font-size:1.5rem;letter-spacing:-.03em;color:var(--ink);text-decoration:none}
+nav a{margin-left:1.25rem;color:var(--muted);font-size:.95rem}
+h1{font-size:clamp(2.4rem,9vw,4.2rem);line-height:1.02;letter-spacing:-.035em;font-weight:800;margin:0 0 1.5rem}
+h2{font-size:1.25rem;letter-spacing:-.01em;margin:0 0 .5rem}
+p{margin:0 0 1rem;max-width:34rem}
+.lede{font-size:1.25rem;color:var(--muted);max-width:30rem}
+.stitch{border:0;border-top:2px dashed var(--thread);margin:clamp(2rem,6vw,3.5rem) 0;opacity:.8}
+.stitch.faint{border-top:1px dashed var(--line);opacity:1}
+section{margin-bottom:2rem}
+ul{padding-left:1.1rem;max-width:34rem}
+li{margin-bottom:.4rem}
+.note{color:var(--muted);font-size:.95rem}
+footer{margin-top:3rem;color:var(--muted);font-size:.9rem}
+@media (prefers-reduced-motion:no-preference){
+  .stitch{background:none}
+}
